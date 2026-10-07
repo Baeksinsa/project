@@ -1,0 +1,157 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-size: 14px;
+  color: #222;
+  background: #f5f6f7;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+.inner { width: 1130px; max-width: 100%; margin: 0 auto; padding: 0 16px; }
+
+/* 상단 유틸 */
+.top-util { background: #fff; font-size: 12px; color: #666; }
+.top-util .inner { display: flex; align-items: center; gap: 10px; height: 34px; }
+.top-util .bar { width: 1px; height: 10px; background: #ddd; }
+.top-util a:hover { text-decoration: underline; }
+
+/* 헤더 */
+.header { background: #fff; padding: 30px 0 26px; }
+.header-inner { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.logo a {
+  font-size: 44px; font-weight: 900; letter-spacing: -1px;
+  color: #03c75a;
+}
+.search-box {
+  display: flex; align-items: center;
+  width: 640px; max-width: 100%; height: 58px;
+  border: 2px solid #03c75a; border-radius: 30px;
+  padding: 0 6px 0 24px; background: #fff;
+  box-shadow: 0 2px 8px rgba(3, 199, 90, .15);
+}
+.search-box input {
+  flex: 1; border: none; outline: none; font-size: 18px; min-width: 0;
+}
+.btn-keyboard { font-size: 20px; color: #888; padding: 0 12px; }
+.btn-search {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: #03c75a; display: flex; align-items: center; justify-content: center;
+}
+
+/* 바로가기 */
+.shortcut { background: #fff; border-bottom: 1px solid #e3e5e8; padding-bottom: 20px; }
+.shortcut-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; }
+.shortcut-list a {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  font-size: 13px; color: #333;
+}
+.shortcut-list .ico {
+  width: 46px; height: 46px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 18px;
+  transition: transform .15s;
+}
+.shortcut-list a:hover .ico { transform: translateY(-3px); }
+
+/* 레이아웃 */
+.container { display: flex; gap: 20px; padding-top: 24px; padding-bottom: 40px; align-items: flex-start; }
+.col-left { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.col-right { width: 350px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  background: #fff; border: 1px solid #e3e5e8; border-radius: 12px; padding: 18px 20px;
+}
+
+/* 배너 */
+.banner {
+  height: 130px; border-radius: 12px; padding: 30px;
+  background: linear-gradient(120deg, #03c75a, #00a3c4);
+  color: #fff;
+}
+.banner-sub { font-size: 14px; opacity: .9; }
+.banner-title { font-size: 26px; font-weight: 700; margin-top: 6px; }
+
+/* 뉴스스탠드 */
+.card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.card-head h2 { font-size: 16px; }
+.tabs button { font-size: 13px; color: #888; padding: 2px 6px; }
+.tabs button.active { color: #222; font-weight: 700; }
+.headline {
+  display: flex; gap: 12px; padding: 12px 14px; margin-bottom: 14px;
+  background: #f7f8fa; border-radius: 8px;
+}
+.press { font-weight: 700; color: #03c75a; white-space: nowrap; }
+.headline-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.headline-text:hover { text-decoration: underline; }
+.press-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  border-top: 1px solid #eee; border-left: 1px solid #eee;
+}
+.press-grid li {
+  height: 52px; display: flex; align-items: center; justify-content: center;
+  border-right: 1px solid #eee; border-bottom: 1px solid #eee;
+  font-weight: 700; color: #444; font-size: 13px; cursor: pointer;
+}
+.press-grid li:hover { background: #f5fbf7; color: #03c75a; }
+
+/* 주제별 */
+.theme-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.theme-tabs button {
+  padding: 7px 14px; border-radius: 18px; border: 1px solid #ddd; color: #555; font-size: 13px;
+}
+.theme-tabs button.active { background: #03c75a; border-color: #03c75a; color: #fff; font-weight: 700; }
+.theme-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.theme-list li a { display: flex; gap: 12px; align-items: center; }
+.theme-list .thumb {
+  width: 96px; height: 64px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 28px;
+}
+.theme-list .title { font-size: 14px; line-height: 1.4; }
+.theme-list .source { font-size: 12px; color: #999; margin-top: 4px; }
+.theme-list li a:hover .title { text-decoration: underline; }
+
+/* 로그인 */
+.login-desc { font-size: 13px; color: #666; margin-bottom: 12px; }
+.btn-login {
+  display: block; text-align: center; height: 52px; line-height: 52px;
+  background: #03c75a; color: #fff; font-size: 17px; font-weight: 700; border-radius: 8px;
+}
+.btn-login:hover { background: #02b351; }
+.login-links { display: flex; justify-content: center; gap: 8px; margin-top: 12px; font-size: 12px; color: #888; }
+.login-links span { color: #ddd; }
+
+/* 날씨 */
+.weather-main { display: flex; align-items: center; gap: 14px; }
+.weather-ico { font-size: 40px; }
+.temp { font-size: 26px; font-weight: 700; }
+.weather-desc { font-size: 13px; color: #666; }
+.weather-sub { display: flex; gap: 16px; margin-top: 12px; font-size: 13px; color: #666; }
+.good { color: #1d8cf8; }
+
+/* 증시 */
+.stock h3 { font-size: 15px; margin-bottom: 10px; }
+.stock li { display: flex; justify-content: space-between; padding: 6px 0; font-size: 13px; }
+.up { color: #f0353b; }
+.down { color: #2f6fe4; }
+
+.ad {
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  color: #aaa; background: #fafafa;
+}
+
+/* 푸터 */
+.footer { background: #fff; border-top: 1px solid #e3e5e8; padding: 26px 0 40px; text-align: center; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; font-size: 12px; color: #666; }
+.footer-links a:hover { text-decoration: underline; }
+.copyright { margin-top: 14px; font-size: 12px; color: #999; }
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .col-right { width: 100%; }
+  .header-inner { flex-direction: column; gap: 14px; }
+  .press-grid { grid-template-columns: repeat(3, 1fr); }
+  .theme-list { grid-template-columns: 1fr; }
+}
